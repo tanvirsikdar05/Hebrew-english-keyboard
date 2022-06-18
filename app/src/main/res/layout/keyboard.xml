@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lauto"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingTop="5dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+    <android.inputmethodservice.KeyboardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/keyboard"
+        android:keyTextColor="@color/txtcolor"
+        android:paddingTop="10dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="10dp"
+        android:layout_gravity="center"
+        android:keyBackground="@drawable/keybg"
+        android:keyPreviewLayout="@layout/key_preview"
+        android:background="@color/keybordbg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:id="@+id/rmvl"
+        android:weightSum="9"
+        android:gravity="center"
+        android:background="@color/keybordbg"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tvnumber"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="2"
+            android:textColor="@color/txtcolor"
+            android:text="123"
+            android:background="@drawable/keybg"
+            android:gravity="center"
+            android:layout_marginEnd="10dp"/>
+        <TextView
+            android:id="@+id/tvspace"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.7"
+            android:textColor="@color/txtcolor"
+            android:background="@drawable/keybg"
+            android:gravity="center"
+            android:text="SPACE"/>
+        <TextView
+            android:id="@+id/tvreturn"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:textColor="@color/txtcolor"
+            android:background="@drawable/keybg"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:backgroundTint="#007AFF"
+            android:text="return"
+            android:layout_marginStart="10dp"/>
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:paddingTop="8dp"
+        android:background="@color/keybordbg">
+
+        <ImageView
+            android:id="@+id/ivimoji"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="25sp"
+            android:src="@drawable/imojiicon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:id="@+id/ivlang"
+            android:layout_height="30dp"
+            android:layout_marginEnd="25sp"
+            android:src="@drawable/languageicon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>
